@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block body_class %}{{ block.super }} home{% endblock %}
+
+{% block content %}
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Gunshot Detection Made Easy!</h1>
+        <p>Automatic Gunshot detection, now available for your city. Help us end gun crime</p>
+        <p><a class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4">
+          <h2>Accurate position</h2>
+          <p> With our low cost microphones, we know instantly, within several meters of where a weapon has been discharged in your city.</p>
+          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+        </div>
+        <div class="col-lg-4">
+          <h2>Situational Awareness</h2>
+          <p>Instantly provide information to responding officers to knowledgably enter a gun based crime scene.</p>
+          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+       </div>
+        <div class="col-lg-4">
+          <h2>Low or No equipment cost</h2>
+          <p>Our proprietary and innovative hardware drastically reduces the cost of your installation.<br/><br/> Ask about our rates.</p>
+          <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+        </div>
+      </div>
+
+      <hr>
+
+    <p>Not available in the US.</p>
+{% endblock %}
