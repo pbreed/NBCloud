@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block body_class %}{{ block.super }} home{% endblock %}
+
+{% block page_title %} Gunshot Map {% endblock %}
+
+
+{% block googleMapAssets %}
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 100% }
+            body { height: 100%; margin-top: 20px; padding: 0 }
+                  #map-canvas { height: 100% }
+                      </style>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD15GY1nsOh6Dh0v0nOXwl8um3_TIgK9Rs&sensor=false">
+    </script>
+
+    <script type="text/javascript">
+      function initialize() {
+          var myLatlng =  new google.maps.LatLng(34.216601, -118.251676);
+          var mapOptions = {
+            center: myLatlng,// To be set dynamically, and updated dynamically with additional shots.
+              zoom: 14
+          };
+          var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+        
+          //THIS SHOULD BE MOVED TO THE JS THIS IS AN UGLY HACK
+          {% for shot in shots%}
+            #add the shot image selection for gun type here
+            var image= "{{ STATIC_URL}}img/mapIcons/pistol.jpg"
+
+            var myLatlng = new google.maps.LatLng({% shot.gps_latitude %}, {% shot.gps_longitude %});
+
+            var marker = new google.maps.Marker({
+                position: myLatlng,
+                map: map,
+                icon: image,
+                title:"Shot detected {% shot.start %}, 9mm, 2 rounds discharged"
+            });
+          {% endfor %} 
+      };
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+{% endblock %}
+
+{% block content %}
+    <p> Shot Spot Sample map</p>
+    <div id="map-canvas"/>
+    <p>{% trans "Edit 'templates/map.html' to modify this content." %}</p>
+{% endblock %}

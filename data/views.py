@@ -10,6 +10,10 @@ def new_sample():
     solve()
     return "{'Success':True}"# match Fred's expectations here
 
+def get_shots():
+    shots = shot.objects.all()
+    return shots
+
 def solve():
     #Where I need the mathmatic magic.
 

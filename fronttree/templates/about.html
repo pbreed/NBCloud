@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block body_class %}{{ block.super }}about{% endblock %}
+
+{% block page_title %}About Gunshot Detection {% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="page-header"><h1>About Us</h2></div>
+    <div class="col-sm-6">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam accumsan ut justo sed mattis. Nunc eu erat viverra, bibendum diam id, lobortis odio. Nullam hendrerit pulvinar lacus, ut suscipit ante ultricies sit amet. Sed non metus ac neque posuere dignissim. Donec libero augue, dapibus vitae nisi eget, ullamcorper porta massa. Cras ut nunc sit amet odio venenatis malesuada ut id purus. Aenean commodo nisl id iaculis imperdiet. Morbi viverra rutrum eleifend. Duis quis ultricies lectus. Nam sodales eget tortor vitae condimentum. Duis posuere, mauris eu lacinia lacinia, nisi ligula accumsan nibh, non adipiscing sapien turpis in risus. Nunc adipiscing ornare mauris, quis rutrum lectus vehicula quis.</p>
+    
+    </div>
+    
+    <div class="col-sm-3">
+        <div class="list-group">
+            <div class="list-group-item">
+                    <h3 class="list-group-item-heading">Contact Us</h3>
+            </div>
+            <div class="list-group-item">
+                    <h4 class="list-group-item-heading">Email</h4>
+                <div class="list-group-item-text">
+                    <a href="mailto:info@gunshots.com">info@gunshots.com</a>
+                </div>
+            </div>
+            <div class="list-group-item">
+                    <h4 class="list-group-item-heading">Phone</h4>
+                <div class="list-group-item-text">
+                    <a href="tel:111.111.1111">111.111.1111</a>
+                </div>
+            </div>
+            <div class="list-group-item">
+                    <h4 class="list-group-item-heading">On the web</h4>
+                <div class="list-group-item-text">
+                    <a href="http://pinterest.com/hellomedia/">Pinterest</a>  | <a href="http://www.linkedin.com/in/margaretpenney">LinkedIn</a> | <a href="http://www.twitter.com/tweethellome">Twitter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
