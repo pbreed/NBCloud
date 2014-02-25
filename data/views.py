@@ -1,21 +1,20 @@
-from django.shortcuts import render
-import math
-from models import detector,shot
 import datetime
+from django.shortcuts import render
+from models import *
+
 
 def new_sample():
-    #TODO build information input here.
-    mydetector = detector.objects.get(device_id=)
-    reading(detector=mydetector,vector=,start=,end=).save()
-    solve()
-    return "{'Success':True}"# match Fred's expectations here
+    #
+    #Find channel
+    #
+    #mydevice = device.objects.get(device_id=device.id)
+    #mychannel = channel.objects.get(device=mydevice, channel=channel_id)
 
-def get_shots():
-    shots = shot.objects.all()
-    return shots
+    #resolve times of sample
+    #start = datetime.datetime.now()
+    #end = datetime.datetime.now()+datetime.timedelta(seconds=2)
 
-def solve():
-    #Where I need the mathmatic magic.
+    #Set and save the sample
+    #sample(value=value,channel=mychannel,start=start,end=end).save()
+    assert False #this needs fixed!
 
-    #Currently adds a shot at kevin's house now.
-    shot(gps_latitude=34.216601,gps_longitude=-118.251676,start=datetime.datetime.now(),end=(datetime.datetime.now()+datetime.timedelta(seconds=1))).save()

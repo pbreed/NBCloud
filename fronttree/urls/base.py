@@ -10,8 +10,8 @@ urlpatterns = patterns('',
     url(r'about', TemplateView.as_view(template_name='about.html'), name='about'),
     url(r'contact', 'fronttree.views.contact'),
 
-    url(r'map', TemplateView.as_view(template_name='map.html'), name='map'),
-    url(r'mapstatic', 'fronttree.views.gunshot_points' ),
+    url(r'reading','fronttree.views.reading'),
+    url(r'raw','fronttree.views.readings'),
 
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),

@@ -18,10 +18,6 @@ MANAGERS = ADMINS
 
 SITE_ID = 1
 
-# Google cloud messenger
-# More information at:  https://github.com/bogdal/django-gcm
-GCM_APIKEY = "AIzaSyDwieM8iKTQ68Nmub6B5t7GUgAURHQrYWI" #Sample google api key from brian
-
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.

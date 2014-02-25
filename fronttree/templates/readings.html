@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block body_class %}{{ block.super }} home{% endblock %}
+
+{% block page_title %} Readings{% endblock %}
+
+{% block content %}
+    <p>Samples</p>
+    {% for sample in samples %}
+        start : {% sample.start %}<\br>
+        end : {% sample.end %}<\br>
+        value : {% sample.value %}<\br>
+    {% endfor %} 
+    {% samples %}
+    <p>{% trans "Edit 'templates/readings.html' to modify this content." %}</p>
+{% endblock %}
