@@ -25,6 +25,18 @@
         <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css" />
         {% block css %}{% endblock %}
         {% block googleMapAssets %}{% endblock %}
+        
+        {% block javascript_library %}
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+            <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+            <script src="{{ STATIC_URL }}js/plugins.js"></script>
+            <script src="{{ STATIC_URL }}js/main.js"></script>
+        {% endblock javascript_library %}
+        
+        {% block javascript %}
+        <script src="{{ STATIC_URL }}js/vendor/bootstrap.min.js"></script>
+        {% endblock javascript %}
+
         <script src="{{ STATIC_URL }}js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
 
@@ -75,17 +87,6 @@
             </div>
         {% block content %}
         {% endblock content %}
-
-        {% block javascript_library %}
-            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-            <script>window.jQuery || document.write('<script src="{{ STATIC_URL }}js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-            <script src="{{ STATIC_URL }}js/plugins.js"></script>
-            <script src="{{ STATIC_URL }}js/main.js"></script>
-        {% endblock javascript_library %}
-        
-        {% block javascript %}
-        <script src="{{ STATIC_URL }}js/vendor/bootstrap.min.js"></script>
-        {% endblock javascript %}
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>

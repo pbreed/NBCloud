@@ -19,6 +19,44 @@ def readings(request):
     return render(request, 'readings.html',{ "samples":str(samplejson)},
                     content_type="application/xhtml+xml")
 
+def graphdata(request):
+    data = [
+            [
+                1,
+                2,
+                3,
+                4,
+                56,
+                7,
+                8,
+                9,
+                10
+            ],
+            [
+                3,
+                4,
+                56,
+                1,
+                8,
+                9,
+                10,
+                2,
+                7
+            ],
+            [
+                1,
+                7,
+                8,
+                56,
+                10,
+                9,
+                2,
+                3,
+                4
+            ]
+        ]
+    return render(request,"graph.html",{'data':data})
+
 @csrf_exempt
 def reading(request):
     #TODO build information input here.

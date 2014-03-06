@@ -13,6 +13,8 @@ urlpatterns = patterns('',
     url(r'reading','fronttree.views.reading'),
     url(r'raw','fronttree.views.readings'),
 
+    url("^datagraph", 'fronttree.views.graphdata'),
+
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^admin/', include(admin.site.urls)),
 )
